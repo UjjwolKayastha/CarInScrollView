@@ -1,18 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backdesign"
+    android:padding="10dp"
+    android:layout_margin="0dp"
+    android:layout_marginTop="5dp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="TYPE AND RUN!"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        android:padding="1dp"
+        android:gravity="end"
+        android:textColor="@android:color/white"
+        />
+    <TextView
+        android:text="Company: "
+        style="@style/tvStyle"
+        />
+    <EditText
+        style="@style/etStyle"
+        android:id="@+id/etCompany"
+        />
+    <TextView
+        style="@style/tvStyle"
+        android:text="Year: "
+        />
+    <EditText
+        style="@style/etStyle"
+        android:id="@+id/etYear"
+        />
+    <TextView
+        android:text="Color:"
+        style="@style/tvStyle"
+        />
+    <EditText
+        style="@style/etStyle"
+        android:id="@+id/etColor"
+        />
+    <TextView
+        android:text="Purchase Price ($): "
+        style="@style/tvStyle"
+        />
+    <EditText
+        style="@style/etStyle"
+        android:id="@+id/etPurchasePrice"
+        />
+    <TextView
+        android:text="Engine size (ltr): "
+        style="@style/tvStyle"
+        />
+    <EditText
+        style="@style/etStyle"
+        android:id="@+id/etEngineSize"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttondesign"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:text="Create Car"
+            android:id="@+id/btnCreate"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttondesign"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Clear"
+            android:id="@+id/btnClear"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/scrollviewbackdesign"
+        android:fillViewport="true"
+        android:padding="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvResult"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
